@@ -1,1 +1,1 @@
-# DE-U-Desktop-Environment---Universal-
+### DE-U (Desktop Environment - Universal)
