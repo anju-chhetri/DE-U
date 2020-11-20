@@ -8,11 +8,6 @@ welcome::welcome(QWidget *parent)
     , ui(new Ui::welcome)
 {
     ui->setupUi(this);
-    QPixmap background_color(":/Images/Images/background.jpg");
-    background_color=background_color.scaled(this->size(),Qt::IgnoreAspectRatio);
-    QPalette for_login;
-    for_login.setBrush(QPalette::Background,background_color);
-    this->setPalette(for_login);
     loginpicture();
     text_username();
     text_password();
