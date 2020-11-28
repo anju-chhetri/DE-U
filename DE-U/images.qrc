@@ -6,5 +6,10 @@
         <file>Images/textedit.jpg</file>
         <file>Images/login_resize.png</file>
         <file>Images/login1_resize.jpg</file>
+        <file>Images/Desk.jpg</file>
+        <file>Images/Desk2.jpg</file>
+        <file>Images/Desk1.jpg</file>
+        <file>Images/to_do_list.txt</file>
     </qresource>
+    <qresource prefix="/n"/>
 </RCC>

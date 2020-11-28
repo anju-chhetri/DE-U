@@ -40,6 +40,128 @@
      <string>day</string>
     </property>
    </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit_list">
+    <property name="geometry">
+     <rect>
+      <x>1053</x>
+      <y>30</y>
+      <width>800</width>
+      <height>650</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Images/Images/Desk2.jpg);</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_view">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>30</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_append">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>70</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_new">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>110</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>New</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_font">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>150</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Font</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_undo">
+    <property name="geometry">
+     <rect>
+      <x>1769</x>
+      <y>190</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Undo</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_redo">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>230</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Redo</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_list">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>680</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift</family>
+      <pointsize>14</pointsize>
+      <weight>9</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 italic 14pt &quot;Bahnschrift&quot;;color:rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>My to-do-list.</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -115,6 +115,10 @@ release/qrc_images.cpp: ../DE-U/images.qrc \
 		../DE-U/Images/login_resize.png \
 		../DE-U/Images/inner_window.png \
 		../DE-U/Images/textedit.jpg \
+		../DE-U/Images/to_do_list.txt \
+		../DE-U/Images/Desk2.jpg \
+		../DE-U/Images/Desk.jpg \
+		../DE-U/Images/Desk1.jpg \
 		../DE-U/Images/background.jpg
 	C:\Qt\5.15.1\mingw81_64\bin\rcc.exe -name images ..\DE-U\images.qrc -o release\qrc_images.cpp
 
@@ -493,14 +497,48 @@ release/desktop.o: ../DE-U/desktop.cpp ../DE-U/desktop.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qguiapplication.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QCommandLinkButton \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qcommandlinkbutton.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QLabel \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMenuBar \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenubar.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmenu.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qaction.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QPlainTextEdit \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qplaintextedit.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qtextedit.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextdocument.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextoption.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextformat.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qpen.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qabstracttextdocumentlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qtextlayout.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qglyphrun.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qrawfont.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/qfontdatabase.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QStatusBar \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QWidget \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTimer \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qtimer.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTime \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/qdatetime.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtCore/QTextStream \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QFontDialog \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qfontdialog.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QShortcut \
+		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qshortcut.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\desktop.o ..\DE-U\desktop.cpp
 
 release/main.o: ../DE-U/main.cpp ../DE-U/welcome.h \
