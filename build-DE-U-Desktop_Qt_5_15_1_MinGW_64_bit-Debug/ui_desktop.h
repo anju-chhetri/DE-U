@@ -16,6 +16,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -35,6 +36,8 @@ public:
     QCommandLinkButton *commandLinkButton_undo;
     QCommandLinkButton *commandLinkButton_redo;
     QLabel *label_name_list;
+    QLabel *label_game;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -88,6 +91,14 @@ public:
         font1.setWeight(9);
         label_name_list->setFont(font1);
         label_name_list->setStyleSheet(QString::fromUtf8("font: 75 italic 14pt \"Bahnschrift\";color:rgb(255,255,255);"));
+        label_game = new QLabel(centralwidget);
+        label_game->setObjectName(QString::fromUtf8("label_game"));
+        label_game->setGeometry(QRect(100, 30, 800, 648));
+        label_game->setStyleSheet(QString::fromUtf8("background-image: url(:/Game/Game/background1.jpg);\n"
+""));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(400, 280, 171, 41));
         Desktop->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Desktop);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -114,6 +125,8 @@ public:
         commandLinkButton_undo->setText(QCoreApplication::translate("Desktop", "Undo", nullptr));
         commandLinkButton_redo->setText(QCoreApplication::translate("Desktop", "Redo", nullptr));
         label_name_list->setText(QCoreApplication::translate("Desktop", "My to-do-list.", nullptr));
+        label_game->setText(QString());
+        pushButton->setText(QCoreApplication::translate("Desktop", "Play", nullptr));
     } // retranslateUi
 
 };

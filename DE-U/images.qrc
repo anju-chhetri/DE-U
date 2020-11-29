@@ -11,5 +11,7 @@
         <file>Images/Desk1.jpg</file>
         <file>Images/to_do_list.txt</file>
     </qresource>
-    <qresource prefix="/n"/>
+    <qresource prefix="/Game">
+        <file>Game/background1.jpg</file>
+    </qresource>
 </RCC>

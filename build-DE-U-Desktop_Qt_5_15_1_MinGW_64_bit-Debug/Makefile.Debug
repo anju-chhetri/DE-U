@@ -110,6 +110,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_images.cpp
 debug/qrc_images.cpp: ../DE-U/images.qrc \
 		C:/Qt/5.15.1/mingw81_64/bin/rcc.exe \
+		../DE-U/Game/background1.jpg \
 		../DE-U/Images/login1_resize.jpg \
 		../DE-U/Images/Login_picture.png \
 		../DE-U/Images/login_resize.png \
