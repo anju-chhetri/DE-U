@@ -12,6 +12,14 @@
         <file>Images/to_do_list.txt</file>
     </qresource>
     <qresource prefix="/Game">
-        <file>Game/background1.jpg</file>
+        <file>Game/background.jpg</file>
+        <file>Game/BackgroundMusic.mp3</file>
+        <file>Game/GunFiring.mp3</file>
+        <file>Game/player.png</file>
+        <file>Game/bullet.png</file>
+        <file>Game/enemy.png</file>
+        <file>Game/gameMusic.mp3</file>
+        <file>Game/enemy1.png</file>
+        <file>Game/player1.png</file>
     </qresource>
 </RCC>

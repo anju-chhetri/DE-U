@@ -172,7 +172,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/Game/Game/background1.jpg);
+     <string notr="true">
+border-image: url(:/Game/Game/background1.jpg);
 </string>
     </property>
     <property name="text">

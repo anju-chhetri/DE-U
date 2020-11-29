@@ -6,6 +6,8 @@
 #include<QTextStream>
 #include <QFontDialog>
 #include <QShortcut>
+#include"z1game.h"
+ extern z1Game *game;
 void Desktop::resizeEvent(QResizeEvent *DesktopResize)
 {
     QPalette p;
@@ -29,6 +31,7 @@ Desktop::Desktop(QWidget *parent) :
     QString string_date=current_date.toString("dddd MMMM yyyy");
     ui->label_date->setText(string_date);
     to_do_list_button();
+
 }
 Desktop::~Desktop()
 {
@@ -137,4 +140,10 @@ void Desktop::on_commandLinkButton_undo_clicked()
 void Desktop::on_commandLinkButton_redo_clicked()
 {
     ui->plainTextEdit_list->redo();
+}
+
+void Desktop::on_pushButton_clicked()
+{
+    game = new z1Game();
+    game ->showFullScreen();
 }

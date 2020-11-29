@@ -17,6 +17,7 @@ public:
     ~Desktop();
     void to_do_list();
     void to_do_list_button();
+
 private slots:
     void time_delay();
 
@@ -31,6 +32,8 @@ private slots:
     void on_commandLinkButton_undo_clicked();
 
     void on_commandLinkButton_redo_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::Desktop *ui;

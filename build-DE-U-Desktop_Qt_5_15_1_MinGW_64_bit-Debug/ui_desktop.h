@@ -94,7 +94,8 @@ public:
         label_game = new QLabel(centralwidget);
         label_game->setObjectName(QString::fromUtf8("label_game"));
         label_game->setGeometry(QRect(100, 30, 800, 648));
-        label_game->setStyleSheet(QString::fromUtf8("background-image: url(:/Game/Game/background1.jpg);\n"
+        label_game->setStyleSheet(QString::fromUtf8("\n"
+"border-image: url(:/Game/Game/background1.jpg);\n"
 ""));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));

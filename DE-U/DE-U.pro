@@ -1,4 +1,6 @@
-QT       += core gui
+QT       += core gui \
+            multimedia
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,11 +13,23 @@ CONFIG += c++11
 SOURCES += \
     desktop.cpp \
     main.cpp \
-    welcome.cpp
+    welcome.cpp \
+    z1game.cpp \
+    z2player.cpp \
+    z3bullet.cpp \
+    z4enemy.cpp \
+    z5score.cpp \
+    z6health.cpp
 
 HEADERS += \
     desktop.h \
-    welcome.h
+    welcome.h \
+    z1game.h \
+    z2player.h \
+    z3bullet.h \
+    z4enemy.h \
+    z5score.h \
+    z6health.h
 
 FORMS += \
     desktop.ui \
