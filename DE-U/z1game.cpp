@@ -5,6 +5,7 @@
 #include<QShortcut>
 z1Game::z1Game(QWidget *parent)
 {
+
 QShortcut *f=new QShortcut(QKeySequence("ctrl+q"),this);
 QObject::connect(f,SIGNAL(activated()),this,SLOT(delete_ptr()));
 scene = new QGraphicsScene();
@@ -30,8 +31,7 @@ health->setPos(health->x(),health->y()+18);
 scene->addItem(health);
 
 scene->addItem(player);
-
-QTimer *timer = new QTimer();
+timer = new QTimer();
 QObject::connect(timer, SIGNAL(timeout()), player, SLOT(spawn()));
 timer->start(2000);
 
@@ -44,7 +44,9 @@ music->play();
 
 void z1Game::delete_ptr()
 {
+    qDebug()<<"delete here!";
     delete this;
+
 }
 
 //QTimer *timer= new QTimer();

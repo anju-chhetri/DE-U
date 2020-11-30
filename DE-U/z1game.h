@@ -8,6 +8,7 @@
 #include "z5score.h"
 #include"z6health.h"
 #include<QObject>
+#include <QTimer>
 class z1Game:public QGraphicsView
 {
     Q_OBJECT
@@ -17,6 +18,7 @@ public:
     z2Player *player;
     z5Score *score;
     z6Health *health;
+    QTimer *timer;
     void delete_ptr();
 };
 

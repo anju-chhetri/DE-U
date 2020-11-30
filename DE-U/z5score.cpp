@@ -15,5 +15,10 @@ void z5Score::increase()
     setPlainText(QString("Score: ")+ QString::number(score));
 }
 
+void z5Score::scoreupdate()
+{
+    setPlainText(QString("Score: ")+ QString::number(score));
+}
+
 
 

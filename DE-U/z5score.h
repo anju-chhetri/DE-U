@@ -2,13 +2,16 @@
 #define Z5SCORE_H
 #include<QGraphicsTextItem>
 
+
 class z5Score: public QGraphicsTextItem
 {
 public:
     z5Score(QGraphicsItem *parent = 0);
      void increase();
+     void scoreupdate();
 private:
      int score;
+     friend class z0Game;
 };
 
 #endif // Z5SCORE_H

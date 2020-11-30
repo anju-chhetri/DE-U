@@ -14,7 +14,12 @@ void z6Health::Decrease()
     setPlainText(QString("Health: ")+QString::number(health));
 }
 
-//int Health::getHealth()
-//{
-//    return health;
-//}
+int z6Health::getHealth()
+{
+    return health;
+}
+
+void z6Health::healthupdate()
+{
+    setPlainText(QString("Health: ")+QString::number(health));
+}
