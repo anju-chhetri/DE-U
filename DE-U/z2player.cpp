@@ -16,16 +16,18 @@ void z2Player::keyPressEvent(QKeyEvent *event)
 {
 if(event->key()==Qt::Key_Left)
 {
-    setPos(x()-10,y());
+    if(pos().x()>0){
+    setPos(x()-10,y());}
 }
 else if(event->key()==Qt::Key_Right)
 {
-    setPos(x()+10,y());
+    if(pos().x()+10<1800){
+    setPos(x()+10,y());}
 }
 else if(event->key()==Qt::Key_Space)
 {
     z3Bullet *bullet = new z3Bullet();
-    bullet->setPos(x(),y());
+    bullet->setPos(x()+50,y());
     scene()->addItem(bullet);
 
 

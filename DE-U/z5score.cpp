@@ -5,7 +5,7 @@ z5Score::z5Score(QGraphicsItem *parent):QGraphicsTextItem(parent)
 {
 score = 0;
 setPlainText(QString("Score: ") + QString::number(score));
-setDefaultTextColor(Qt::white);
+setDefaultTextColor(Qt::green);
 setFont(QFont("times",16));
 }
 

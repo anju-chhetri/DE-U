@@ -6,6 +6,7 @@
 #include "z3bullet.h"
 #include "z4enemy.h"
 #include <QMediaPlayer>
+
 class z2Player:public QObject ,public QGraphicsPixmapItem{
     Q_OBJECT
 

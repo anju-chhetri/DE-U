@@ -15,7 +15,6 @@ public:
     void resizeEvent(QResizeEvent *DesktopResize);
     explicit Desktop(QWidget *parent = nullptr);
     ~Desktop();
-    void to_do_list();
     void to_do_list_button();
 
 private slots:
@@ -33,7 +32,9 @@ private slots:
 
     void on_commandLinkButton_redo_clicked();
 
-    void on_pushButton_clicked();
+    void on_pushButton_gameplay_clicked();
+
+    void on_pushButton_desktop_log_out_clicked();
 
 private:
     Ui::Desktop *ui;

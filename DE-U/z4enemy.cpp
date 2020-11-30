@@ -7,7 +7,7 @@ extern z0Game *game;
 extern z7GameOver *gameover;
 z4Enemy::z4Enemy()
 {
-int random_num = rand()%1000;
+int random_num = rand()%1700;
 setPos(random_num,0);
 
 setPixmap(QPixmap(":/Game/Game/enemy1.png"));
@@ -28,7 +28,7 @@ void z4Enemy::move()
             delete this;
         }
     }
-    if (pos().y()>(800-45))
+    if (pos().y()>(950-45))
     {
         game->health->Decrease();
          gameover = new z7GameOver;
@@ -37,7 +37,3 @@ void z4Enemy::move()
         delete this;
     }
 }
-
-//QTimer *timer = new QTimer(this);
-//connect(timer,SIGNAL(timeout()),this,SLOT(move()));
-//timer->start(50);

@@ -2,7 +2,6 @@ debug/desktop.o
 debug/main.o
 debug/welcome.o
 debug/z0game.o
-debug/z1game.o
 debug/z2player.o
 debug/z3bullet.o
 debug/z4enemy.o
@@ -13,7 +12,6 @@ debug/qrc_images.o
 debug/moc_desktop.o
 debug/moc_welcome.o
 debug/moc_z0game.o
-debug/moc_z1game.o
 debug/moc_z2player.o
 debug/moc_z3bullet.o
 debug/moc_z4enemy.o

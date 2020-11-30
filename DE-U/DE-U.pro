@@ -15,7 +15,6 @@ SOURCES += \
     main.cpp \
     welcome.cpp \
     z0game.cpp \
-    z1game.cpp \
     z2player.cpp \
     z3bullet.cpp \
     z4enemy.cpp \
@@ -27,7 +26,6 @@ HEADERS += \
     desktop.h \
     welcome.h \
     z0game.h \
-    z1game.h \
     z2player.h \
     z3bullet.h \
     z4enemy.h \

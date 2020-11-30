@@ -6,8 +6,30 @@
 #include<QTextStream>
 #include <QFontDialog>
 #include <QShortcut>
-#include"z1game.h"
- extern z1Game *game;
+#include"z0game.h"
+z0Game *game;
+
+Desktop::Desktop(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::Desktop)
+{
+    ui->setupUi(this);
+    ui->label_time->setStyleSheet("color : rgb(14,215,255);font-size: 32px;");//7,182,191
+    ui->label_date->setStyleSheet("color: rgb(14,215,255);font-size : 32px;");//120,124,123
+   ui->pushButton_gameplay->setStyleSheet("background-image:url(:/Images/Images/Desk2.jpg);font-weight:bold;color:rgb(255,255,255);");
+    QTimer *time=new QTimer();
+    connect(time,SIGNAL(timeout()),this,SLOT(time_delay()));
+    time->start(500);
+    QDate current_date=QDate::currentDate();
+    QString string_date=current_date.toString("dddd MMMM yyyy");
+    ui->label_date->setText(string_date);
+    to_do_list_button();
+    ui->pushButton_desktop_log_out->setStyleSheet("background-image:url(:/Images/Images/inner_window.png);color:rgb(255,255,255);font-size:20px");
+}
+Desktop::~Desktop()
+{
+    delete ui;
+}
 void Desktop::resizeEvent(QResizeEvent *DesktopResize)
 {
     QPalette p;
@@ -17,36 +39,6 @@ void Desktop::resizeEvent(QResizeEvent *DesktopResize)
     this->setPalette(p);
 }
 
-Desktop::Desktop(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::Desktop)
-{
-    ui->setupUi(this);
-    ui->label_time->setStyleSheet("color : rgb(120,124,123);font-size: 32px;");//7,182,191
-    ui->label_date->setStyleSheet("color: rgb(120,124,123);font-size : 32px;");
-    QTimer *time=new QTimer();
-    connect(time,SIGNAL(timeout()),this,SLOT(time_delay()));
-    time->start(500);
-    QDate current_date=QDate::currentDate();
-    QString string_date=current_date.toString("dddd MMMM yyyy");
-    ui->label_date->setText(string_date);
-    to_do_list_button();
-
-}
-Desktop::~Desktop()
-{
-    delete ui;
-}
-
-void Desktop::to_do_list()
-{/*
-    QPixmap background_list(":/Images/Images/Desk.jpg");
-    background_list=background_list.scaled(ui->plainTextEdit_list->size(),Qt::IgnoreAspectRatio);
-    QPalette background_palette;
-    background_palette.setBrush(QPalette::Background,background_list);
-    ui->plainTextEdit_list->setPalette(background_palette);*/
-    //ui->plainTextEdit_list->setStyleSheet("background-image: url(:/Images/Images/Desk.jpg);");
-}
 
 void Desktop::to_do_list_button()
 {
@@ -142,8 +134,20 @@ void Desktop::on_commandLinkButton_redo_clicked()
     ui->plainTextEdit_list->redo();
 }
 
-void Desktop::on_pushButton_clicked()
+
+void Desktop::on_pushButton_gameplay_clicked()
 {
-    game = new z1Game();
-    game ->showFullScreen();
+
+    game=new z0Game;
+    game->move(50,30);
+    game->setFixedSize(1800,950);
+    game->show();
 }
+
+void Desktop::on_pushButton_desktop_log_out_clicked()
+{
+    QMessageBox::StandardButton confirm;
+    confirm=QMessageBox::question(this,"Confirm","Log out from this device",QMessageBox::Yes|QMessageBox::No);
+    if(QMessageBox::Yes==confirm){
+    QApplication::quit();
+}}

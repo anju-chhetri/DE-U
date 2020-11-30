@@ -63,7 +63,7 @@ void welcome::text_password()
 void welcome::on_pushButton_out_clicked()
 {
 QMessageBox::StandardButton option;
-option= QMessageBox::question(this,"Confirm","DO you wish to quit?",QMessageBox::Yes|QMessageBox::No);
+option= QMessageBox::question(this,"Confirm","Log out from this device?",QMessageBox::Yes|QMessageBox::No);
 if(option==QMessageBox::Yes){QApplication::quit();}
 }
 

@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>1053</x>
-      <y>30</y>
+      <y>40</y>
       <width>800</width>
       <height>650</height>
      </rect>
@@ -140,7 +140,7 @@
     <property name="geometry">
      <rect>
       <x>1060</x>
-      <y>680</y>
+      <y>690</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -162,35 +162,46 @@
      <string>My to-do-list.</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_game">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>30</y>
+      <x>50</x>
+      <y>40</y>
       <width>800</width>
       <height>648</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-border-image: url(:/Game/Game/background1.jpg);
-</string>
+     <string notr="true">background-image:url(:/Game/Game/background.jpg);</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_gameplay">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>280</y>
-      <width>171</width>
-      <height>41</height>
+      <x>380</x>
+      <y>310</y>
+      <width>131</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
      <string>Play</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_desktop_log_out">
+    <property name="geometry">
+     <rect>
+      <x>1770</x>
+      <y>920</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Log out</string>
     </property>
    </widget>
   </widget>

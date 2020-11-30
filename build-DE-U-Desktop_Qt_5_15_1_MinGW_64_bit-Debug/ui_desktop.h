@@ -36,8 +36,9 @@ public:
     QCommandLinkButton *commandLinkButton_undo;
     QCommandLinkButton *commandLinkButton_redo;
     QLabel *label_name_list;
-    QLabel *label_game;
-    QPushButton *pushButton;
+    QLabel *label;
+    QPushButton *pushButton_gameplay;
+    QPushButton *pushButton_desktop_log_out;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -56,7 +57,7 @@ public:
         label_date->setGeometry(QRect(840, 950, 451, 91));
         plainTextEdit_list = new QPlainTextEdit(centralwidget);
         plainTextEdit_list->setObjectName(QString::fromUtf8("plainTextEdit_list"));
-        plainTextEdit_list->setGeometry(QRect(1053, 30, 800, 650));
+        plainTextEdit_list->setGeometry(QRect(1053, 40, 800, 650));
         QFont font;
         font.setPointSize(14);
         plainTextEdit_list->setFont(font);
@@ -81,7 +82,7 @@ public:
         commandLinkButton_redo->setGeometry(QRect(1770, 230, 81, 41));
         label_name_list = new QLabel(centralwidget);
         label_name_list->setObjectName(QString::fromUtf8("label_name_list"));
-        label_name_list->setGeometry(QRect(1060, 680, 171, 41));
+        label_name_list->setGeometry(QRect(1060, 690, 171, 41));
         QFont font1;
         font1.setFamily(QString::fromUtf8("Bahnschrift"));
         font1.setPointSize(14);
@@ -91,15 +92,16 @@ public:
         font1.setWeight(9);
         label_name_list->setFont(font1);
         label_name_list->setStyleSheet(QString::fromUtf8("font: 75 italic 14pt \"Bahnschrift\";color:rgb(255,255,255);"));
-        label_game = new QLabel(centralwidget);
-        label_game->setObjectName(QString::fromUtf8("label_game"));
-        label_game->setGeometry(QRect(100, 30, 800, 648));
-        label_game->setStyleSheet(QString::fromUtf8("\n"
-"border-image: url(:/Game/Game/background1.jpg);\n"
-""));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(400, 280, 171, 41));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(50, 40, 800, 648));
+        label->setStyleSheet(QString::fromUtf8("background-image:url(:/Game/Game/background.jpg);"));
+        pushButton_gameplay = new QPushButton(centralwidget);
+        pushButton_gameplay->setObjectName(QString::fromUtf8("pushButton_gameplay"));
+        pushButton_gameplay->setGeometry(QRect(380, 310, 131, 51));
+        pushButton_desktop_log_out = new QPushButton(centralwidget);
+        pushButton_desktop_log_out->setObjectName(QString::fromUtf8("pushButton_desktop_log_out"));
+        pushButton_desktop_log_out->setGeometry(QRect(1770, 920, 121, 51));
         Desktop->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Desktop);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -126,8 +128,9 @@ public:
         commandLinkButton_undo->setText(QCoreApplication::translate("Desktop", "Undo", nullptr));
         commandLinkButton_redo->setText(QCoreApplication::translate("Desktop", "Redo", nullptr));
         label_name_list->setText(QCoreApplication::translate("Desktop", "My to-do-list.", nullptr));
-        label_game->setText(QString());
-        pushButton->setText(QCoreApplication::translate("Desktop", "Play", nullptr));
+        label->setText(QString());
+        pushButton_gameplay->setText(QCoreApplication::translate("Desktop", "Play", nullptr));
+        pushButton_desktop_log_out->setText(QCoreApplication::translate("Desktop", "Log out", nullptr));
     } // retranslateUi
 
 };

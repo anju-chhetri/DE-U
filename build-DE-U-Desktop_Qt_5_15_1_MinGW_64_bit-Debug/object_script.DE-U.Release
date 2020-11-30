@@ -2,7 +2,6 @@ release/desktop.o
 release/main.o
 release/welcome.o
 release/z0game.o
-release/z1game.o
 release/z2player.o
 release/z3bullet.o
 release/z4enemy.o
@@ -13,7 +12,6 @@ release/qrc_images.o
 release/moc_desktop.o
 release/moc_welcome.o
 release/moc_z0game.o
-release/moc_z1game.o
 release/moc_z2player.o
 release/moc_z3bullet.o
 release/moc_z4enemy.o

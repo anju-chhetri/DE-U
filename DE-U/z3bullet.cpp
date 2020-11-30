@@ -3,9 +3,9 @@
 #include<QGraphicsScene>
 #include<QList>
 #include "z4enemy.h"
-#include "z1game.h"
-
-extern z1Game *game;
+#include "z0game.h"
+#include <QMediaPlayer>
+extern z0Game *game;
 z3Bullet::z3Bullet()
 {
 setPos(x(),y());
@@ -23,9 +23,13 @@ void z3Bullet::move()
  {
      if(typeid(*(colliding_items[i]))==typeid (z4Enemy))
      {
+         QMediaPlayer *collision_song=new QMediaPlayer;
+         collision_song->setMedia(QUrl("qrc:/Game/Game/collision.mp3"));
+         collision_song->play();
          game->score->increase();
          scene()->removeItem(colliding_items[i]);
          scene()->removeItem(this);
+
          delete colliding_items[i];
          delete this;
          return;

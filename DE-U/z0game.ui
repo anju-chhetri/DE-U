@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1800</width>
+    <height>950</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,20 +17,20 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>0</x>
       <y>0</y>
-      <width>671</width>
-      <height>591</height>
+      <width>1861</width>
+      <height>951</height>
      </rect>
     </property>
    </widget>
    <widget class="QCommandLinkButton" name="replay">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>140</y>
+      <x>860</x>
+      <y>380</y>
       <width>172</width>
-      <height>41</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
@@ -43,7 +43,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1800</width>
      <height>21</height>
     </rect>
    </property>

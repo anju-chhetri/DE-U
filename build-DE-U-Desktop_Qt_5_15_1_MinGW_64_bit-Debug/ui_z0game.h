@@ -33,19 +33,19 @@ public:
     {
         if (z0Game->objectName().isEmpty())
             z0Game->setObjectName(QString::fromUtf8("z0Game"));
-        z0Game->resize(800, 600);
+        z0Game->resize(1800, 950);
         centralwidget = new QWidget(z0Game);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(60, 0, 671, 591));
+        graphicsView->setGeometry(QRect(0, 0, 1861, 951));
         replay = new QCommandLinkButton(centralwidget);
         replay->setObjectName(QString::fromUtf8("replay"));
-        replay->setGeometry(QRect(310, 140, 172, 41));
+        replay->setGeometry(QRect(860, 380, 172, 91));
         z0Game->setCentralWidget(centralwidget);
         menubar = new QMenuBar(z0Game);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 1800, 21));
         z0Game->setMenuBar(menubar);
         statusbar = new QStatusBar(z0Game);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
