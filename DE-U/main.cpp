@@ -1,12 +1,11 @@
 #include "welcome.h"
 #include "desktop.h"
 #include <QApplication>
-welcome *w;
+welcome *w; //creating a global welcome pointer
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Desktop *d =new Desktop;
+    QApplication a(argc, argv);//creating a QApplication object
      w =new welcome;
-     d->showFullScreen();
-    return a.exec();
+     w->showFullScreen(); //calling the welcome window in fullscreen mode
+    return a.exec(); //starting the eventloop.
 }

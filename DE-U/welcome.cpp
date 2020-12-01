@@ -7,8 +7,8 @@ welcome::welcome(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::welcome)
 {
-    ui->setupUi(this);
-    loginpicture();
+    ui->setupUi(this); //sending the mainwindow pointer to ui_welcome.h which create the ui window widgets
+    loginpicture();   //setting login picture,username and password
     text_username();
     text_password();
     ui->label_welcome->setStyleSheet("QLabel {color : rgb(4, 136, 172);}");
@@ -22,7 +22,7 @@ welcome::~welcome()
     delete ui;
 }
 
-void welcome::resizeEvent(QResizeEvent *initial_window)
+void welcome::resizeEvent(QResizeEvent *initial_window) //event handler for fullscreen mode.
 {
 
     QPixmap background_color(":/Images/Images/background.jpg");
@@ -60,7 +60,7 @@ void welcome::text_password()
 }
 
 
-void welcome::on_pushButton_out_clicked()
+void welcome::on_pushButton_out_clicked() //creating a messagebox for login interface
 {
 QMessageBox::StandardButton option;
 option= QMessageBox::question(this,"Confirm","Log out from this device?",QMessageBox::Yes|QMessageBox::No);
@@ -68,7 +68,7 @@ if(option==QMessageBox::Yes){
     QApplication::quit();}
 }
 
-void welcome::on_commandLinkButton_clicked()
+void welcome::on_commandLinkButton_clicked()//checking the username and password entered by the user
 {
     if(ui->lineEdit_username->text()=="project" && ui->lineEdit_password->text()=="HelloWorld") {
         this->hide();

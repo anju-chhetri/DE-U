@@ -9,7 +9,7 @@ class Desktop;
 
 class Desktop : public QMainWindow
 {
-    Q_OBJECT
+    Q_OBJECT //macro declaration for meta object compiler
 
 public:
     void resizeEvent(QResizeEvent *DesktopResize);
@@ -17,7 +17,7 @@ public:
     ~Desktop();
     void to_do_list_button();
 
-private slots:
+private slots: //slots compiled using MOC
     void time_delay();
 
     void on_commandLinkButton_view_clicked();
