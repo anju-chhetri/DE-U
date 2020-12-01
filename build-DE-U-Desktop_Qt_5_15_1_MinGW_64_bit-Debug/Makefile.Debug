@@ -146,17 +146,18 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_images.cpp
 debug/qrc_images.cpp: ../DE-U/images.qrc \
 		C:/Qt/5.15.1/mingw81_64/bin/rcc.exe \
-		../DE-U/Game/enemy1.png \
+		../DE-U/Game/airplane1.png \
+		../DE-U/Game/airplane.png \
 		../DE-U/Game/player1.png \
 		../DE-U/Game/player.png \
 		../DE-U/Game/gameMusic.mp3 \
 		../DE-U/Game/collision.mp3 \
 		../DE-U/Game/BackgroundMusic.mp3 \
+		../DE-U/Game/joystick.png \
 		../DE-U/Game/background2.jpg \
 		../DE-U/Game/bullet.png \
 		../DE-U/Game/background.jpg \
 		../DE-U/Game/background1.jpg \
-		../DE-U/Game/enemy.png \
 		../DE-U/Game/GunFiring.mp3 \
 		../DE-U/Images/login1_resize.jpg \
 		../DE-U/Images/Login_picture.png \
@@ -543,6 +544,7 @@ debug/moc_z0game.cpp: ../DE-U/z0game.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QGraphicsTextItem \
 		../DE-U/z6health.h \
 		../DE-U/z7gameover.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QCloseEvent \
 		debug/moc_predefs.h \
 		C:/Qt/5.15.1/mingw81_64/bin/moc.exe
 	C:\Qt\5.15.1\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/anju/OneDrive/Desktop/DE-U/build-DE-U-Desktop_Qt_5_15_1_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/5.15.1/mingw81_64/mkspecs/win32-g++ -IC:/Users/anju/OneDrive/Desktop/DE-U/DE-U -IC:/Qt/5.15.1/mingw81_64/include -IC:/Qt/5.15.1/mingw81_64/include/QtMultimedia -IC:/Qt/5.15.1/mingw81_64/include/QtWidgets -IC:/Qt/5.15.1/mingw81_64/include/QtGui -IC:/Qt/5.15.1/mingw81_64/include/QtANGLE -IC:/Qt/5.15.1/mingw81_64/include/QtNetwork -IC:/Qt/5.15.1/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\DE-U\z0game.h -o debug\moc_z0game.cpp
@@ -1076,7 +1078,9 @@ debug/desktop.o: ../DE-U/desktop.cpp ../DE-U/desktop.h \
 		../DE-U/z5score.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QGraphicsTextItem \
 		../DE-U/z6health.h \
-		../DE-U/z7gameover.h
+		../DE-U/z7gameover.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QCloseEvent \
+		../DE-U/welcome.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\desktop.o ..\DE-U\desktop.cpp
 
 debug/main.o: ../DE-U/main.cpp ../DE-U/welcome.h \
@@ -1485,6 +1489,7 @@ debug/z0game.o: ../DE-U/z0game.cpp ../DE-U/z0game.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QGraphicsTextItem \
 		../DE-U/z6health.h \
 		../DE-U/z7gameover.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QCloseEvent \
 		ui_z0game.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QApplication \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/qapplication.h \
@@ -1789,7 +1794,8 @@ debug/z3bullet.o: ../DE-U/z3bullet.cpp ../DE-U/z3bullet.h \
 		../DE-U/z5score.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QGraphicsTextItem \
 		../DE-U/z6health.h \
-		../DE-U/z7gameover.h
+		../DE-U/z7gameover.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QCloseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\z3bullet.o ..\DE-U\z3bullet.cpp
 
 debug/z4enemy.o: ../DE-U/z4enemy.cpp ../DE-U/z4enemy.h \
@@ -1934,7 +1940,8 @@ debug/z4enemy.o: ../DE-U/z4enemy.cpp ../DE-U/z4enemy.h \
 		../DE-U/z5score.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtWidgets/QGraphicsTextItem \
 		../DE-U/z6health.h \
-		../DE-U/z7gameover.h
+		../DE-U/z7gameover.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QCloseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\z4enemy.o ..\DE-U\z4enemy.cpp
 
 debug/z5score.o: ../DE-U/z5score.cpp ../DE-U/z5score.h \
@@ -2267,7 +2274,8 @@ debug/z7gameover.o: ../DE-U/z7gameover.cpp ../DE-U/z7gameover.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtMultimedia/qaudio.h \
 		C:/Qt/5.15.1/mingw81_64/include/QtNetwork/qnetworkconfiguration.h \
 		../DE-U/z5score.h \
-		../DE-U/z6health.h
+		../DE-U/z6health.h \
+		C:/Qt/5.15.1/mingw81_64/include/QtGui/QCloseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\z7gameover.o ..\DE-U\z7gameover.cpp
 
 debug/qrc_images.o: debug/qrc_images.cpp 

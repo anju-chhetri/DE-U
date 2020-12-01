@@ -6,11 +6,14 @@
 #include<QShortcut>
 z7GameOver *gameover;
 QMediaPlayer *music;
+
 z0Game::z0Game(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::z0Game)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Game");
+    setWindowIcon(QIcon(":/Game/Game/joystick.png"));
     ui->replay->setStyleSheet("color: rgb(0,0,0);font-size: 27px;font-weight:bold;");
     ui->statusbar->setStyleSheet("color: rgb(0,0,0);font-size: 15px;font-weight:bold;");
     ui->statusbar->showMessage("Press ctrl+t to exit the game.",5000);
@@ -47,13 +50,17 @@ z0Game::z0Game(QWidget *parent) :
 
     music = new QMediaPlayer;
     music->setMedia(QUrl("qrc:/Game/Game/gameMusic.mp3"));
-    //qDebug()<<
     music->play();
 }
 
 z0Game::~z0Game()
 {
     delete ui;
+}
+
+void z0Game::closeEvent(QCloseEvent *close)
+{
+    delete music;
 }
 
 void z0Game::make_replay_visible()
@@ -74,7 +81,9 @@ void z0Game::deletecalled()
 void z0Game::on_replay_clicked()
 {
 
+
     scene->removeItem(gameover);
+
     score->score = 0;
     score->scoreupdate();
     health->health = 3;

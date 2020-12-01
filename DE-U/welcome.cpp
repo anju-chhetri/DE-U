@@ -64,7 +64,8 @@ void welcome::on_pushButton_out_clicked()
 {
 QMessageBox::StandardButton option;
 option= QMessageBox::question(this,"Confirm","Log out from this device?",QMessageBox::Yes|QMessageBox::No);
-if(option==QMessageBox::Yes){QApplication::quit();}
+if(option==QMessageBox::Yes){
+    QApplication::quit();}
 }
 
 void welcome::on_commandLinkButton_clicked()

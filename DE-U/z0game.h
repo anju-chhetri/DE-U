@@ -9,6 +9,7 @@
 #include"z6health.h"
 #include "z7gameover.h"
 #include <QTimer>
+#include <QCloseEvent>
 namespace Ui {
 class z0Game;
 }
@@ -25,7 +26,7 @@ public:
     z5Score *score;
     z6Health *health;
     QTimer *timer;
-
+    void closeEvent(QCloseEvent *close);
 void make_replay_visible();
 
 public slots:

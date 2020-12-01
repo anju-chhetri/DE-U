@@ -7,8 +7,11 @@
 #include <QFontDialog>
 #include <QShortcut>
 #include"z0game.h"
-z0Game *game;
+#include <welcome.h>
 
+z0Game *game;
+extern QMediaPlayer *music;
+extern welcome *w;
 Desktop::Desktop(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Desktop)
@@ -25,6 +28,8 @@ Desktop::Desktop(QWidget *parent) :
     ui->label_date->setText(string_date);
     to_do_list_button();
     ui->pushButton_desktop_log_out->setStyleSheet("background-image:url(:/Images/Images/inner_window.png);color:rgb(255,255,255);font-size:20px");
+    ui->pushButton_restart->setStyleSheet("background-image:url(:/Images/Images/inner_window.png);color:rgb(255,255,255);font-size:20px");
+
 }
 Desktop::~Desktop()
 {
@@ -142,6 +147,10 @@ void Desktop::on_pushButton_gameplay_clicked()
     game->move(50,30);
     game->setFixedSize(1800,950);
     game->show();
+
+//  game->setAttribute(Qt::WA_DeleteOnClose,true);
+//      qDebug()<<game->isVisible();
+
 }
 
 void Desktop::on_pushButton_desktop_log_out_clicked()
@@ -151,3 +160,12 @@ void Desktop::on_pushButton_desktop_log_out_clicked()
     if(QMessageBox::Yes==confirm){
     QApplication::quit();
 }}
+
+void Desktop::on_pushButton_restart_clicked()
+{
+    QMessageBox::StandardButton restart;
+    restart=QMessageBox::question(this,"Confirm","Restart?",QMessageBox::Yes|QMessageBox::No);
+    if(restart==QMessageBox::Yes){
+    this->hide();
+    w->showFullScreen();}
+}

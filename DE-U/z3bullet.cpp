@@ -6,6 +6,7 @@
 #include "z0game.h"
 #include <QMediaPlayer>
 extern z0Game *game;
+
 z3Bullet::z3Bullet()
 {
 setPos(x(),y());

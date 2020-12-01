@@ -36,6 +36,8 @@ private slots:
 
     void on_pushButton_desktop_log_out_clicked();
 
+    void on_pushButton_restart_clicked();
+
 private:
     Ui::Desktop *ui;
 };

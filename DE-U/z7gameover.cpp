@@ -15,6 +15,7 @@ z7GameOver::z7GameOver(QGraphicsItem *parent):QGraphicsTextItem(parent)
             game->make_replay_visible();
             music->stop();
 
+
         }
 
     }

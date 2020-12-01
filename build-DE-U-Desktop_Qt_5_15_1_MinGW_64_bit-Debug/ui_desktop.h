@@ -39,6 +39,7 @@ public:
     QLabel *label;
     QPushButton *pushButton_gameplay;
     QPushButton *pushButton_desktop_log_out;
+    QPushButton *pushButton_restart;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -102,6 +103,9 @@ public:
         pushButton_desktop_log_out = new QPushButton(centralwidget);
         pushButton_desktop_log_out->setObjectName(QString::fromUtf8("pushButton_desktop_log_out"));
         pushButton_desktop_log_out->setGeometry(QRect(1770, 920, 121, 51));
+        pushButton_restart = new QPushButton(centralwidget);
+        pushButton_restart->setObjectName(QString::fromUtf8("pushButton_restart"));
+        pushButton_restart->setGeometry(QRect(1770, 970, 121, 51));
         Desktop->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Desktop);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -131,6 +135,7 @@ public:
         label->setText(QString());
         pushButton_gameplay->setText(QCoreApplication::translate("Desktop", "Play", nullptr));
         pushButton_desktop_log_out->setText(QCoreApplication::translate("Desktop", "Log out", nullptr));
+        pushButton_restart->setText(QCoreApplication::translate("Desktop", "Restart", nullptr));
     } // retranslateUi
 
 };
