@@ -32,13 +32,6 @@ void make_replay_visible();
 public slots:
     void deletecalled();
     void on_replay_clicked();
-//    z5Score return_score():
-//    z5Score return_score()
-//    {
-//        z5Score *temp;
-//        temp->score = 0;
-//        return temp;
-//    }
 
 private:
     Ui::z0Game *ui;

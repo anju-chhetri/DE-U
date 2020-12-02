@@ -3,7 +3,7 @@
 z6Health::z6Health(QGraphicsItem *parent):QGraphicsTextItem(parent)
 {
 health = 3;
-setPlainText(QString("Health: ")+QString::number(health));
+setPlainText(QString("Health: ")+QString::number(health)); //dispaly health on screen
 setDefaultTextColor(Qt::red);
 setFont(QFont("times", 16));
 }

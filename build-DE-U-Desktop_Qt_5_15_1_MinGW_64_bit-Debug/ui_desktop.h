@@ -40,6 +40,7 @@ public:
     QPushButton *pushButton_gameplay;
     QPushButton *pushButton_desktop_log_out;
     QPushButton *pushButton_restart;
+    QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -55,7 +56,7 @@ public:
         label_time->setGeometry(QRect(930, 910, 371, 71));
         label_date = new QLabel(centralwidget);
         label_date->setObjectName(QString::fromUtf8("label_date"));
-        label_date->setGeometry(QRect(840, 950, 451, 91));
+        label_date->setGeometry(QRect(825, 950, 451, 91));
         plainTextEdit_list = new QPlainTextEdit(centralwidget);
         plainTextEdit_list->setObjectName(QString::fromUtf8("plainTextEdit_list"));
         plainTextEdit_list->setGeometry(QRect(1053, 40, 800, 650));
@@ -106,6 +107,16 @@ public:
         pushButton_restart = new QPushButton(centralwidget);
         pushButton_restart->setObjectName(QString::fromUtf8("pushButton_restart"));
         pushButton_restart->setGeometry(QRect(1770, 970, 121, 51));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(50, 690, 181, 31));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Bahnschrift"));
+        font2.setPointSize(14);
+        font2.setItalic(true);
+        font2.setUnderline(true);
+        label_2->setFont(font2);
+        label_2->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255);"));
         Desktop->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Desktop);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -136,6 +147,7 @@ public:
         pushButton_gameplay->setText(QCoreApplication::translate("Desktop", "Play", nullptr));
         pushButton_desktop_log_out->setText(QCoreApplication::translate("Desktop", "Log out", nullptr));
         pushButton_restart->setText(QCoreApplication::translate("Desktop", "Restart", nullptr));
+        label_2->setText(QCoreApplication::translate("Desktop", "Aero Shoot", nullptr));
     } // retranslateUi
 
 };
