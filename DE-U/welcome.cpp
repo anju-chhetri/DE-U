@@ -71,7 +71,7 @@ if(option==QMessageBox::Yes){
 void welcome::on_commandLinkButton_clicked()//checking the username and password entered by the user
 {
     if(ui->lineEdit_username->text()=="project" && ui->lineEdit_password->text()=="HelloWorld") {
-        this->hide();
+        //this->hide();
         goDesktop=new Desktop;
         goDesktop->showFullScreen();
     }
