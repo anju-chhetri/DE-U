@@ -76,7 +76,11 @@ void welcome::on_commandLinkButton_clicked()//checking the username and password
         QApplication::quit();
     }
     if(ui->lineEdit_username->text()=="project" && ui->lineEdit_password->text()=="HelloWorld") {
+<<<<<<< HEAD
        // this->hide();
+=======
+        //this->hide();
+>>>>>>> 350ff5042ade99e825d249ccaf87b6d385169f26
         goDesktop=new Desktop;
         goDesktop->showFullScreen();
     }
