@@ -70,17 +70,24 @@ if(option==QMessageBox::Yes){
 
 void welcome::on_commandLinkButton_clicked()//checking the username and password entered by the user
 {
+    if(count==1){
+        QMessageBox::warning(this,"exit","You have hit the wrong username and password too many times.\nLogging out of this device.");
+        sleep(2);
+        QApplication::quit();
+    }
     if(ui->lineEdit_username->text()=="project" && ui->lineEdit_password->text()=="HelloWorld") {
-        this->hide();
+       // this->hide();
         goDesktop=new Desktop;
         goDesktop->showFullScreen();
     }
     else if(ui->lineEdit_password->text()=="" && ui->lineEdit_password->text()==""){
         ui->statusbar->showMessage("Please enter your username and password.",4000);
         ui->statusbar->setStyleSheet("color:white;");
+
     }
     else{
         ui->statusbar->showMessage("Either username or password wrong.",4000);
         ui->statusbar->setStyleSheet("color:white;");
+        count--;
     }
 }
