@@ -25,7 +25,6 @@ public:
     z2Player *player;
     z5Score *score;
     z6Health *health;
-    QTimer *timer;
     void closeEvent(QCloseEvent *close);
 void make_replay_visible();
 
