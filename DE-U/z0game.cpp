@@ -6,7 +6,7 @@
 #include<QShortcut>
 z7GameOver *gameover;
 QMediaPlayer *music;
-
+QTimer *timers;
 z0Game::z0Game(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::z0Game)
@@ -44,9 +44,9 @@ z0Game::z0Game(QWidget *parent) :
     scene->addItem(health);
     scene->addItem(player);
 
-    timer = new QTimer();
-    QObject::connect(timer, SIGNAL(timeout()), player, SLOT(spawn()));
-    timer->start(2000);
+    timers = new QTimer();
+    QObject::connect(timers, SIGNAL(timeout()), player, SLOT(spawn()));
+    timers->start(2000);
 
     music = new QMediaPlayer;
     music->setMedia(QUrl("qrc:/Game/Game/gameMusic.mp3"));/*playing the music*/
@@ -61,6 +61,8 @@ z0Game::~z0Game()
 void z0Game::closeEvent(QCloseEvent *close)//event handler for window close
 {
     delete music;
+    timers->stop();
+    delete this;
 }
 
 void z0Game::make_replay_visible()
@@ -73,6 +75,8 @@ void z0Game::make_replay_visible()
 
 void z0Game::deletecalled()
 {
+    delete music;
+    timers->stop();
     delete this;
 
 }
